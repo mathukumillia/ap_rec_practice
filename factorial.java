@@ -49,8 +49,14 @@ public class factorial {
 	 * @return	the factorial of n
 	 */
 	public static int iterativeFactorial(int n) {
-		
-		return 0; // dummy return so file compiles, replace when writing method
+		int answer = 1;
+
+		while(n > 1){
+			answer *= n * (n-1);
+			n= n-2;
+		}
+
+		return answer; 
 	}
 	
 	/**
