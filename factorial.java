@@ -31,11 +31,14 @@ public class factorial {
 			quit(args[0]);
 		}
 		
-		int f  = iterativeFactorial(n);
+		//int f  = iterativeFactorial(n);
 
-		// int f  = recursiveFactorial(n);
+		int f  = recursiveFactorial(n);
 		
 		System.out.println("The factorial of "+ n + " is " + f + ".");
+
+
+		System.out.println("The recursive sum of "+ n + " is " + recursiveSum(n) + ".");
 
 	}
 	
@@ -69,10 +72,22 @@ public class factorial {
 	 */
 	private static int recursiveFactorial(int n)  {
 		
-		return 0; // dummy return so file compiles, replace when writing method	
+		if(n == 1){
+			return 1;
+		}
+
+		return n * recursiveFactorial(n-1);
 	}
 
 	
+	public static int recursiveSum(int n){
+		if(n == 0){
+			return 0;
+		}
+
+		return n + recursiveSum(n-1);
+	}
+
 	/**
 	 * quit
 	 * 		exit the program when user entered an invalid number

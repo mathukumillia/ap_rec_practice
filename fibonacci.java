@@ -58,6 +58,11 @@ public class fibonacci {
 	 * @param n - the number of fibonacci numbers to find. must be non-negative.
 	 */
 	public static void recursiveFibonacci(int n) {
+		if(n == 1){
+			System.out.println(n);
+		}
+
+		System.out.println(n + recursiveFibonacci(n-1));
 
 	}
 
