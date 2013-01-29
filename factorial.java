@@ -79,7 +79,15 @@ public class factorial {
 		return n * recursiveFactorial(n-1);
 	}
 
-	
+	/**
+	 *		recursiveSum
+	 *		finds the sum of all the numbers before a given number including the number
+	 *
+	 * 		@param - n the number you want to find the sum of
+	 * 		@return - the recursive sum
+	 *
+	 * 
+	 */
 	public static int recursiveSum(int n){
 		if(n == 0){
 			return 0;
