@@ -31,11 +31,12 @@ public class palindrome{
 
 
 	public static boolean recursivePalindrome(String word){
-		if(word.length() == 0){
-			return true;
+		if(word.charAt(0) == word.charAt(word.length() - 1)){
+			if(word.length() == 1 || word.length() == 0){
+				return true;
+			}
+			return recursivePalindrome(word.substring(1,word.length() -1));
 		}
-		if(! word.charAt(0) == word.charAt(word.length()-1)){
-			return false;
-		}
+		return false;
 	}
 }
